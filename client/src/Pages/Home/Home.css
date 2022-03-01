@@ -173,3 +173,6 @@ h3::before {
   justify-content: flex-end;
   flex-direction: column;
 }
+.user-description {
+  font-size: 12px;
+}

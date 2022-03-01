@@ -6,16 +6,16 @@ import nosFond_img4 from "./img/nosFond-img4.png";
 import Carousel from "react-elastic-carousel";
 import MainLayout from "../../MainLayout/MainLayout";
 import HeaderBackground from "../../Components/HeaderBackground/HeaderBackground";
-import './NosFond.css'
+import "./NosFond.css";
 
 const NosFond = () => {
-    const breakPoints = [
-        { width: 1, itemsToShow: 1 },
-        { width: 550, itemsToShow: 2 },
-        { width: 768, itemsToShow: 3 },
-        { width: 1200, itemsToShow: 3 },
-      ];
-      const Fondsimgs =[nosFond_img1,nosFond_img2,nosFond_img3,nosFond_img4]
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 3 },
+  ];
+  const Fondsimgs = [nosFond_img1, nosFond_img2, nosFond_img3, nosFond_img4];
   return (
     <>
       <MainLayout>
@@ -30,7 +30,7 @@ const NosFond = () => {
               institutionnels de premier plan.
             </p>
             <div className="image-nosFond-first">
-            <Carousel
+              <Carousel
                 itemPadding={[10, 50]}
                 enableAutoPlay
                 autoPlaySpeed={1800}
@@ -39,11 +39,10 @@ const NosFond = () => {
                 pagination={false}
                 showArrows={false}
               >
-                  {Fondsimgs.map((img) => (
-                 <img className="Fonds__img" src={img} alt="img" />
+                {Fondsimgs.map((img) => (
+                  <img className="Fonds__img" src={img} alt="img" />
                 ))}
-                  </Carousel>
-              
+              </Carousel>
             </div>
           </div>
           <div className="nosFond-container-2">
@@ -58,29 +57,32 @@ const NosFond = () => {
               La règlementation en vigueur leur permet d’opter pour l’un des
               schémas suivants :
             </p>
-            <div className="image-nosFond-second">
-              <div className="fond__card__container">
-                <h4 className="home-main-subtitles">
-                  {" "}
-                  100% des revenus ou bénéfices imbosable sans minumum d'impot
-                </h4>
-                <div className="card__subcontainer">
-                  <p className="page-description">
-                    Deduction totale sur la base d'un engagement de la STB SICAR
-                    d'employer 75% de mentant déposés dans des ZDR ou aricole
-                  </p>
+            <div className="nos-fonds-card-container">
+              <div className="image-nosFond-second">
+                <div className="fond__card__container">
+                  <h4 className="home-main-subtitles">
+                    100% des revenus ou bénéfices imbosable sans minumum d'impot
+                  </h4>
+                  <div className="card__subcontainer">
+                    <p>
+                      Deduction totale sur la base d'un engagement de la STB
+                      SICAR d'employer 75% de mentant déposés dans des ZDR ou
+                      aricole
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="fond__card__container">
-                <h4 className="home-main-subtitles">
-                  {" "}
-                  100% des revenus ou bénéfices imbosable sans minumum d'impot
-                </h4>
-                <div className="card__subcontainer">
-                  <p className="page-description">
-                    Deduction totale sur la base d'un engagement de la STB SICAR
-                    d'employer 75% de mentant déposés dans des ZDR ou aricole
-                  </p>
+                <div className="fond__card__container">
+                  <h4 className="home-main-subtitles">
+                    {" "}
+                    35% des revenus ou bénéfices imbosable sans minumum d'impot
+                  </h4>
+                  <div className="card__subcontainer">
+                    <p>
+                      Deduction de revenues ou beneficies reinvestis aupres de
+                      la STB SICAR, sur la base d'un engagement d'emploi de 65%
+                      dans des projets definis par la reglementation
+                    </p>
+                  </div>
                 </div>
               </div>
               {/* <img

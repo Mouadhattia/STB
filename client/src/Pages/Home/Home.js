@@ -223,35 +223,29 @@ const Home = () => {
             </p>
           </div>
           <div className="notre__equipe">
-           
-           <Carousel
-             itemPadding={[10, 50]}
-             enableAutoPlay
-             autoPlaySpeed={1800}
-             outerSpacing={100}
-             breakPoints={breakPoints}
-             pagination={false}
-             showArrows={false}
-           >
-             {team.map((user) => (
-               <div className="notre__equipe__item">
-                 <div>
-                  
+            <Carousel
+              itemPadding={[10, 50]}
+              enableAutoPlay
+              autoPlaySpeed={1800}
+              outerSpacing={100}
+              breakPoints={breakPoints}
+              pagination={false}
+              showArrows={false}
+            >
+              {team.map((user) => (
+                <div className="notre__equipe__item">
+                  <div>
+                    <img src={user.img} alt="" />
+                    <h2>{user.name}</h2>
+                  </div>
 
-                     <img src={user.img} alt="" />
-                     <h2>{user.name}</h2>
-                    
-                   </div>
-                   
-                   <h4> {user.role}</h4>
-                 
-                
+                  <h4> {user.role}</h4>
 
-                 <h5 className="">{user.descreption}</h5>
-               </div>
-             ))}
-           </Carousel>
-         </div>
+                  <p className="user-description">{user.descreption}</p>
+                </div>
+              ))}
+            </Carousel>
+          </div>
         </div>
       </MainLayout>
     </>
