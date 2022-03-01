@@ -6,10 +6,15 @@ import NosFond from "./Pages/nosFonds/NosFond";
 import { Route, Routes } from "react-router-dom";
 import NosRealisations from "./Pages/NosRealisations/NosRealisations";
 import Actualites from "./Pages/Actualites/Actualites";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
+      {/* //hello */}
+      <div></div>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

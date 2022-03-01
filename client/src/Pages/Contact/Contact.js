@@ -11,10 +11,13 @@ import "./Contact.css";
 import MainLayout from "../../MainLayout/MainLayout";
 import HeaderBackground from "../../Components/HeaderBackground/HeaderBackground";
 import { Link } from "react-router-dom";
-import LeafletMap from "../../Components/Leaflet/LeafletMap"
+import LeafletMap from "../../Components/Leaflet/LeafletMap";
+import axios from "axios";
+import { toast } from "react-toastify";
+import load1 from "./load2.gif";
+
 
 const Contact = () => {
-  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -28,6 +31,33 @@ const Contact = () => {
   };
   const handleMessage = (e) => {
     setMessage(e.target.value);
+  };
+  const submitForm = async (e) => {
+    e.preventDefault();
+    try {
+      let data = {
+        name,
+        email,
+        message,
+      };
+      setBool(true);
+      const res = await axios.post(`/contact`, data);
+      if (name.length === 0 || email.length === 0 || message.length === 0) {
+        setBanner(res.data.msg);
+        toast.error(res.data.msg);
+        setBool(false);
+      } else if (res.status === 200) {
+        setBanner(res.data.msg);
+        toast.success(res.data.msg);
+        setBool(false);
+
+        setName("");
+        setEmail("");
+        setMessage("");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <>
@@ -87,7 +117,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="back-form">
-              <form onSubmit="">
+              <form onSubmit={submitForm}>
                 <p>{banner}</p>
                 <label htmlFor="name">Nom et Prénom</label>
                 <input type="text" onChange={handleName} value={name} />
@@ -103,28 +133,26 @@ const Contact = () => {
                 />
 
                 <div className="send-btn">
-                  <button type="submit">
-                    send
-                    <i className="fa fa-paper-plane" />
-                    {bool ? (
-                      <b className="load">
-                        <img src="" alt="image not responding" />
-                      </b>
-                    ) : (
-                      ""
-                    )}
-                  </button>
+                <button type="submit">
+                envoyer
+                
+                {bool ? (
+                  <b className="load">
+                    <img src={load1} alt="image not responding" />
+                  </b>
+                ) : (
+                  ""
+                )}
+              </button>
                 </div>
               </form>
             </div>
           </div>
           <div className="map">
-          <LeafletMap />
+            <LeafletMap />
           </div>
         </div>
-        
       </MainLayout>
-      
     </>
   );
 };

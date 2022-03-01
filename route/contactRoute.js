@@ -8,7 +8,7 @@ router.post("/contact", (req, res) => {
     data.email.length === 0 ||
     data.message.length === 0
   ) {
-    return res.json({ msg: "Please Fill All The Fields!" });
+    return res.json({ msg: "Please fill all the fields!" });
   }
 
   let smtpTransporter = nodemailer.createTransport({
@@ -39,7 +39,7 @@ router.post("/contact", (req, res) => {
     try {
       if (error)
         return res.status(400).json({ msg: "Please fill all the fields!" });
-      res.status(200).json({ msg: "Thank You For Contacting STB SICAR." });
+      res.status(200).json({ msg: "Thank you for contacting STB SICAR." });
     } catch (error) {
       if (error) return res.status(500).json({ msg: "There is server error" });
     }

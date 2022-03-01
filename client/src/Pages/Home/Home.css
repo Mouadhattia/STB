@@ -122,28 +122,68 @@ h3::before {
 .CustomCardEsprit {
   width: 50%;
 }
-.notre__equipe{
+.notre__equipe {
   padding: 80px 0 80px;
 
-  
   background-position: center;
   background-attachment: fixed;
   opacity: 0.85;
-  
-  
- 
 }
 
-.notre__equipe__item{
+.notre__equipe__item {
   background-color: white;
   padding: 30px;
   border-radius: 50px 50px 50px 0px;
   height: 300px;
   display: flex;
   flex-direction: column;
- 
+  border: solid 2px black;
 }
-.notre__equipe__item img{
+.notre__equipe__item img {
+  height: 70px;
+  width: 70px;
+  border: 2px solid transparent;
+  border-color: black;
+
+  border-radius: 50%;
+}
+.notre__equipe__item div {
+  display: flex;
+  align-items: center;
+}
+.notre__equipe__item__info {
+  display: flex;
+}
+.notre__equipe__item div h2 {
+  margin-left: 20px;
+  font-size: 18px;
+}
+.notre__equipe__item div h4 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.notre__equipe__item h5 {
+  font-size: 14px;
+
+  font-weight: 400;
+  margin: 0;
+
+  height: 70%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.notre__equipe__item {
+  background-color: white;
+  padding: 30px;
+  border-radius: 50px 50px 50px 0px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.notre__equipe__item img {
   height: 70px;
   width: 70px;
   border: 2px solid transparent;
