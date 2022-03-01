@@ -2,6 +2,8 @@
   width: 50vw;
   height: 50vh;
   display: flex;
+ 
+  
   justify-content: space-between;
   margin: 0 0 4vh 15vh;
 }

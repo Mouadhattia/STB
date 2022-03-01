@@ -8,7 +8,7 @@ router.post("/contact", (req, res) => {
     data.email.length === 0 ||
     data.message.length === 0
   ) {
-    return res.json({ msg: "Please fill all the fields!" });
+    return res.json({ msg: "Veuillez remplir tous les champs !" });
   }
 
   let smtpTransporter = nodemailer.createTransport({
@@ -38,10 +38,10 @@ router.post("/contact", (req, res) => {
   smtpTransporter.sendMail(mailOptions, (error) => {
     try {
       if (error)
-        return res.status(400).json({ msg: "Please fill all the fields!" });
-      res.status(200).json({ msg: "Thank you for contacting STB SICAR." });
+        return res.status(400).json({ msg: "Veuillez remplir tous les champs !" });
+      res.status(200).json({ msg: "Merci d'avoir contacté STB SICAR." });
     } catch (error) {
-      if (error) return res.status(500).json({ msg: "There is server error" });
+      if (error) return res.status(500).json({ msg: "Il y a une erreur dont le serveur" });
     }
   });
 });

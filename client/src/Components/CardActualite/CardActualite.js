@@ -17,7 +17,9 @@ const CardActualite = ({actualite}) => {
           
         </button>
       </div>
+      
     </div>
+    
   );
 };
 
