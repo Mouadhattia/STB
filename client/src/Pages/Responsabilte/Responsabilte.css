@@ -1,0 +1,59 @@
+.valeurImage {
+  margin: 20px 0px;
+}
+.voletDiv {
+  text-align: center;
+}
+.odd-main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
+}
+.grid-layout {
+  padding: 10px;
+  width: 40%;
+}
+.grid-description {
+  font-size: 14px;
+}
+.visisble {
+  width: 80%;
+}
+#hidden {
+  color: #051c24;
+}
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.odd-title {
+  color: #0594d0;
+  font-size: 20px;
+}
+#btnA {
+  padding: 8px;
+  width: 20%;
+  color: #0594d0;
+  background-color: transparent;
+  border: none;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 15px;
+}
+#btnM {
+  padding: 8px;
+  width: 20%;
+  color: #051c24;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+
+  border: none;
+  margin: 10px;
+}
+button:hover {
+  cursor: pointer;
+}
