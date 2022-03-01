@@ -1,0 +1,36 @@
+.fond__card__container {
+  width: 18vw;
+  height: 35vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   border-radius: 9px;
+  border: solid 2px #051C24 ;
+  margin-right: 10vw;
+
+}
+.card__subcontainer {
+  width: 14vw;
+  background-color: #051C24 ;
+  height: 20vh;
+  border-radius: 9px;
+  margin-bottom: 6%;
+  align-items: center;
+  display: flex;
+  color: white;
+  
+}
+.image-nosFond-second{
+  display: flex;
+  justify-content: center;
+  
+}
+.fond__card__container h4 {
+  color: #051C24;
+}
+.Fonds__img{
+  width: 20vw;
+ height: 40vh;
+}
