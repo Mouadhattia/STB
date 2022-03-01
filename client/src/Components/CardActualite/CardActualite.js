@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardActualite.css";
 
-const CardActualite = ({actualite}) => {
+const CardActualite = ({ actualite }) => {
   return (
     <div className="card__container">
       <div className="card__img__container">
@@ -9,17 +9,12 @@ const CardActualite = ({actualite}) => {
       </div>
       <div className="card__desc__container">
         <div>
-          <h2>{actualite.title}</h2>
+          <h4 className="home-main-subtitles">{actualite.title}</h4>
           <p> {actualite.desc}</p>
         </div>
-        <button>
-          Lire plus
-          
-        </button>
+        <button>Lire plus</button>
       </div>
-      
     </div>
-    
   );
 };
 
